@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        window.addEventListener('beforeunload', function (event) {
+            event.preventDefault();
+            event.returnValue = '';
+            return 'Are you sure you want to leave? Any unsaved changes will be lost.';
+        });
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5521219086088837" crossorigin="anonymous"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WX5VS54ZDW"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-WX5VS54ZDW');
+    </script>
+    <script src='https://cdn.jsdelivr.net/gh/gn-math/gn-math.github.io@main/gnmath.js'></script>
+    <meta charset="UTF-8">
+    <link rel="icon" href="gay.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magma</title>
+    <meta name="title" content="GN-games">
+    <meta name="description" content="Play unbl*cked games like Crazy Cattle 3D and DriveMad on GN-games. Fast, free, no downloads—perfect for school or home.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://goreffplazy.github.io/YEA/">
+    <meta property="og:title" content="GN-games">
+    <meta property="og:description" content="Play unbl*cked games like Crazy Cattle 3D and DriveMad on GN-games. Fast, free, no downloads—perfect for school or home.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://goreffplazy.github.io/YEA/">
+    <meta name="twitter:title" content="GN-games">
+    <meta name="twitter:description" content="Play unbl*cked games like Crazy Cattle 3D and DriveMad on GN-games. Fast, free, no downloads—perfect for school or home.">
+    <meta name="keywords" content="unblocked games, games for school, browser games, chromebook games, no download games, html5 games, free unblocked games, gn-games, fun games at school, crazy cattle 3d, play crazy cattle 3d, crazy cattle 3d unblocked, crazy cattle, crazy cattle unblocked, play crazy cattle, crazy cattle online, crazy cattle 3d online">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dark-mode">
+    <h1>GN-games</h1>
+    <input type="text" id="searchBar" placeholder="Search zones..." onkeyup="filterZones()">
+    <div id="topControls">
+        <div id="dataButtons">
+            <button onclick="saveData()">Save Data</button>
+            <button onclick="document.getElementById('file').click()">Load Data</button>
+            <input type="file" id="file" style="display:none" onchange="loadData(event)" />
+        </div>
+        <select id="sortOptions" onchange="sortZones()">
+            <option value="name">by Nameㅤ</option>
+            <option value="id">by Id (Date)ㅤ</option>
+            <option value="popular">by Popularityㅤ</option>
+        </select>
+    </div>
+    <div class="zone-wrapper">
+        <div id="zoneCount" class="zone-count"></div>
+        <div id="container">Loading...</div>
+    </div>
+    <div id="zoneViewer">
+        <div id="zoneInfo">
+            <div id="zoneTitle">
+                <span id="zoneName"></span> <a id="zoneAuthor"></a> <span id="zoneId"></span>
+            </div>
+            <div id="controls">
+                <button onclick="downloadZone()" id="download" class="green-button">Download Local</button>
+                <button onclick="closeZone()">Close</button>
+                <button onclick="fullscreenZone()">Fullscreen</button>
+                <button onclick="aboutBlank()">about:blank (use if embed is broken)</button>
+            </div>
+        </div>
+        <iframe id="zoneFrame"></iframe>
+    </div>
+    <button id="settings">Settings</button>
+    <div id="footerButtons">
+        <button onclick="showContact()">Contact</button>
+        <button onclick="loadPrivacy()">Privacy Policy</button>
+    </div>
+    <div id="popupOverlay">
+        <div id="popupContent">
+            <div id="popupHeader">
+                <span id="popupTitle"></span>
+                <button onclick="closePopup()">Close</button>
+            </div>
+            <div id="popupBody" contenteditable="false"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script data-num-rows="2"
+src="https://s3-us-west-2.amazonaws.com/kaboodle/kaboodle.js"
+type="text/javascript"></script> 
+</body>
+
+</html>
